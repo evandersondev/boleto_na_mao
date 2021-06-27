@@ -1,0 +1,41 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+import '/shared/models/user_model.dart';
+
+class AuthController {
+  UserModel? _user;
+
+  UserModel get user => _user!;
+
+  void setUser(BuildContext context, UserModel? user) {
+    if (user != null) {
+      saveUser(user);
+      _user = user;
+      Navigator.pushReplacementNamed(context, '/home', arguments: user);
+    } else {
+      Navigator.pushReplacementNamed(context, '/login');
+    }
+  }
+
+  Future<void> saveUser(UserModel user) async {
+    final prefs = await SharedPreferences.getInstance();
+
+    await prefs.setString('boletonamao_user', user.toJson());
+    return;
+  }
+
+  Future<void> currentUser(BuildContext context) async {
+    final prefs = await SharedPreferences.getInstance();
+
+    await Future.delayed(const Duration(seconds: 2));
+
+    if (prefs.containsKey('boletonamao_user')) {
+      final user = prefs.getString('boletonamao_user') as String;
+      setUser(context, UserModel.fromJson(user));
+      return;
+    } else {
+      setUser(context, null);
+    }
+  }
+}

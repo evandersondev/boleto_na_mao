@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "465179644940",
+    "project_id": "boleto-na-mao",
+    "storage_bucket": "boleto-na-mao.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:465179644940:android:574c05c26b6e5acbf34a29",
+        "android_client_info": {
+          "package_name": "com.example.payflow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "465179644940-2g5oo793ghjik040ihfpuc20ueahhg7b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.payflow",
+            "certificate_hash": "5077c4d6aa5a3b607a100866aba015e0a98bd9d1"
+          }
+        },
+        {
+          "client_id": "465179644940-pogl3dv5e4mptpmcvja9bsl176nfkk29.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwVZbBEzNbF5pyfHCQIaVQtcfdpEUZXRM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "465179644940-pogl3dv5e4mptpmcvja9bsl176nfkk29.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
